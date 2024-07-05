@@ -1,18 +1,36 @@
-name: CI
-
+name: Convert Chef Recipe to Ansible Playbook
+ 
 on:
   push:
-    branches: [ main ]
-
+    branches:
+      - main  # Trigger the workflow on push or pull request to the main branch
+ 
 jobs:
-  build:
+  convert_and_commit:
     runs-on: ubuntu-latest
-
+ 
     steps:
-    - uses: actions/checkout@v2
-    - name: Run a one-line script
-      run: echo Hello, world!
-    - name: Run a multi-line script
+    - name: Checkout code
+      uses: actions/checkout@v2
+ 
+    - name: Set up Python
+      uses: actions/setup-python@v2
+      with:
+        python-version: '3.x'
+ 
+    - name: Install dependencies
       run: |
-        echo Add other commands here
-        echo This runs in a shell
+        python -m pip install --upgrade pip
+        pip install huggingface_hub transformers
+ 
+    - name: Convert Chef recipe to Ansible playbook
+      run: |
+        python convert_chef_to_ansible.py  # This is a hypothetical script you would need to create
+ 
+    - name: Commit and push changes
+      run: |
+        git config --global user.name 'GitHub Actions'
+        git config --global user.email 'github-actions@github.com'
+        git add -A
+        git commit -m "Convert Chef recipe to Ansible playbook"
+        git push
