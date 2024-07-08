@@ -29,8 +29,8 @@ jobs:
 
     - name: Commit and push changes
       run: |
-        git config --local user.email "action@github.com"
-        git config --local user.name "GitHub Action"
+        git config --local user.email "tanyagarg1311@gmail.com"
+        git config --local user.name "GargTanya"
         git add .
         git commit -m "Add converted playbook files" -a
         git push
