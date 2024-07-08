@@ -18,8 +18,8 @@ jobs:
     - name: Checkout other repository
       uses: actions/checkout@v2
       with:
-        repository: org/repo
-        path: my_directory
+        repository: https://github.com/GargTanya/Chef-ansible.git
+        path: https://github.com/GargTanya/Chef-ansible.git/my_directory
 
     - name: Install dependencies
       run: |
