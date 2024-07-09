@@ -24,6 +24,12 @@ jobs:
     - name: Setup Python
       uses: actions/setup-python@v5.1.0
 
+    - name: Install Langchain
+      run: |
+             python -m pip install --upgrade pip
+              pip install langchain
+
+
     - name: Run conversion script
       run: python convert.py
 
