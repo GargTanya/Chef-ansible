@@ -40,3 +40,5 @@ jobs:
         git add .
         git commit -m "Add converted playbook files" -a
         git push
+    env:
+       GITHUB_TOKEN: ${{ secrets.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 }}
