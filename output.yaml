@@ -1,0 +1,1 @@
+['\n[ANS]\n---\n- name: Install tree package \n\n  yum: \n\n    name: tree \n\n    state: present \n\n \n\n- name: Create the directory if it does not exist \n\n  file: \n\n    path: /testcook/recipes/recipe2 \n\n    state: directory \n\n    owner: root \n\n    group: root \n\n   ']
