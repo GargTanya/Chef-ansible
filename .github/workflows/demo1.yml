@@ -32,13 +32,13 @@ jobs:
 
     - name: Run conversion script
       run: 
-           python convert.py > output.yml
+           python convert.py > output.yaml
 
     - name: Commit and push changes
       run: |
         git config --local user.email "tanyagarg1311@gmail.com"
         git config --local user.name "GargTanya"
-        git add .
+        git add output.yaml
         git commit -m "Add converted playbook files" -a
         git push
     
