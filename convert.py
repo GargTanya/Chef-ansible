@@ -48,6 +48,21 @@ print(output[0]['generated_text'])
  
 # for answer in answers:
 # print(answer)
+[1:20 PM] Ritik Singh
+# Extracting the generated_text field
+texts = [item['generated_text'] for item in output]
+ 
+# # extract the part after "[/INST]\n: Like this:"
+answers = [text.split('[/INST]\n')[1] for text in texts if '[/INST]\n' in text]
+ 
+ 
+# for answer in answers:
+print(answers)
+ 
+# Open the file in write mode ('w')
+with open('output.yaml', 'w') as file:
+    # Write the generated text to the file
+    file.write(answers[0])
  
  
  
