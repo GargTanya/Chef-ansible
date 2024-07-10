@@ -42,3 +42,5 @@ jobs:
         git commit -m "Add converted playbook files" -a
         git push
     
+      env:
+        GITHUB_TOKEN: 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
