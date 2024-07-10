@@ -38,7 +38,7 @@ output = query({
     "parameters": {'min_length': 200, 'max_length': 500, 'max_time':120}
 })
 # print(output)
-print(output[0]['generated_text'])
+#print(output[0]['generated_text'])
 # Extracting the generated_text field
 # texts = [item['generated_text'] for item in output]
  
