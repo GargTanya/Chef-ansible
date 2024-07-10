@@ -48,7 +48,6 @@ print(output[0]['generated_text'])
  
 # for answer in answers:
 # print(answer)
-[1:20 PM] Ritik Singh
 # Extracting the generated_text field
 texts = [item['generated_text'] for item in output]
  
